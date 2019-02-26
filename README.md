@@ -2,11 +2,9 @@
 This is the theme use in my personal website
 
 
-# Blogs Using Nice-Blog
+# Sites Using JWK-Theme
 
-https://blog.colacoweb.net
-
-http://pietromarchesi.net
+https://jwkennington.com
 
 # Extras
 

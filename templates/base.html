@@ -127,26 +127,13 @@
 
 		<!-- Breadcrumbs Container-->
 		<div id="content-wrapper">
-			<section id="titlebar">
-				<!-- Container -->
-				<!--<div class="container">-->
-				<!--{% if LOGO %}-->
-					<!--<div class="five columns">-->
-							<!--<h3>{{ SITENAME }}</h3>-->
-					<!--</div>-->
-				<!--{% endif %}-->
-				<!--&lt;!&ndash;<div class="thirteen columns">&ndash;&gt;-->
-					<!--&lt;!&ndash;<nav id="breadcrumbs">&ndash;&gt;-->
-						<!--&lt;!&ndash;<ul>&ndash;&gt;-->
-							<!--&lt;!&ndash;<li>You are here:</li>&ndash;&gt;-->
-							<!--&lt;!&ndash;<li><a href="{{ SITEURL }}/">Home</a></li>&ndash;&gt;-->
-							<!--&lt;!&ndash;{% block page_breadcrumbs %}{% endblock page_breadcrumbs %}&ndash;&gt;-->
-						<!--&lt;!&ndash;</ul>&ndash;&gt;-->
-					<!--&lt;!&ndash;</nav>&ndash;&gt;-->
-				<!--&lt;!&ndash;</div>&ndash;&gt;-->
-				<!--</div>-->
-				<!-- Container / End -->
-			</section>
+			<!--<section id="titlebar">-->
+			<!---->
+			<!--</section>-->
+
+			<div class="container page-header-image">
+				{% block image_header %}{% endblock image_header %}
+			</div>
 
 			<div class="container">
 				{% block content_placeholder %}{% endblock content_placeholder %}
@@ -158,7 +145,7 @@
 		<div id="footer-bottom">
 			<!-- Container -->
 			<div class="container">
-				<div class="eight columns">&copy; {{ COPYRIGHT }} || Blog powered by <a href="http://getpelican.com">Pelican</a></div>
+				<div class="eight columns">&copy; {{ COPYRIGHT }} </div>
 				{% if SOCIAL %}
 					<div class="eight columns">
 						<ul class="social-icons-footer">
