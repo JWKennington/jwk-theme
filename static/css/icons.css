@@ -1172,7 +1172,7 @@ ul.icons li [class*=" icon-"] {
 }
  
 .social-icons-footer li i {
-	font-family: "fontello";
+	font-family: "FontAwesome";
 	font-style: normal;
 	font-weight: normal;
 	speak: none;
@@ -1187,7 +1187,7 @@ ul.icons li [class*=" icon-"] {
 }
 
 .social-icons li i {
-  font-family: "fontello";
+  font-family: "FontAwesome";
   font-style: normal;
   font-weight: normal;
   speak: none;

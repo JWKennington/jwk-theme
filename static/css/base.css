@@ -262,3 +262,9 @@
 	  	width: auto !important;
 	  	padding: 10px !important;
 	}
+	
+/* #MathJax coloring
+================================================== */
+.MathJax .mi, .MathJax .mo {
+    color: inherit;
+}
