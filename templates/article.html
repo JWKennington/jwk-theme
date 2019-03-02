@@ -43,6 +43,14 @@
 	<meta property="article:published_time" content="{{ article.date }}">
 {% endblock %}
 
+{% block image_header %}
+	{% if article.image_header %}
+		<img src="{{ article.image_header }}">
+	{% elif ARTICLE_PAGE_IMAGE_HEADER %}
+		<img src="{{ ARTICLE_PAGE_IMAGE_HEADER }}">
+	{% endif %}
+{% endblock image_header %}
+
 {% block page_breadcrumbs %}
 <li><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></li>
 <li>{{ article.title }}</li>

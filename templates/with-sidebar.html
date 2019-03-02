@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+{% block image_header %}
+	{% if BLOG_PAGE_IMAGE_HEADER %}
+		<img src="{{ BLOG_PAGE_IMAGE_HEADER }}">
+	{% endif %}
+{% endblock image_header %}
+
 {% block content_placeholder %}
 	<div class="twelve alt columns">
 		{% block content %}{% endblock content %}
