@@ -249,7 +249,7 @@
 	#mobile-navigation { display: block; }
 
 	#responsive,
-	.search-container { display: none; }
+	.search-container { }
 
 	#header {
 		z-index: 999;

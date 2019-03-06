@@ -149,6 +149,13 @@
 				{% if SOCIAL %}
 					<div class="eight columns">
 						<ul class="social-icons-footer">
+							{% for name,link in FA_SOCIAL %}
+								<li class="social-icons-footer-fa-override">
+									<a href="{{ link }}" class="tooltip top social-icons-footer-fa-override" title="{{ name }}">
+										<i class="icon-{{ name|lower }}"></i>
+									</a>
+								</li>
+						    {% endfor %}
 						    {% for name,link in SOCIAL %}
 								<li>
 									<a href="{{ link }}" class="tooltip top" title="{{ name }}">
