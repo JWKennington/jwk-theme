@@ -9,6 +9,19 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
     </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{GOOGLE_ANALYTICS}}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', '{{GOOGLE_ANALYTICS}}', {
+        'page_title' : '{{ output_file }}',
+        'page_path': '{{ output_file }}'
+      });
+    </script>
 {% endif %}
 {% if GAUGES %}
     <script type="text/javascript">
