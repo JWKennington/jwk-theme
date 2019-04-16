@@ -37,3 +37,8 @@
 	<br>
 {% endif %}
 {% endblock content %}
+
+
+{% block pv %}
+	{{ super() }} {{ page.pageview }}
+{% endblock pv %}
