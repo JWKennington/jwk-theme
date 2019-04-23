@@ -1,5 +1,5 @@
 # JWK-Theme theme
-This is the theme use in my personal website
+This is the theme use in my personal website, forked and modified from [nice-blog](https://github.com/guilherme-toti/nice-blog).
 
 
 # Sites Using JWK-Theme
