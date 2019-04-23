@@ -42,7 +42,7 @@
         {% endif %}
 
         <!-- CSS -->
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css?v=1.0.1">
 
         <!-- Custom CSS -->
         {% if THEME_COLOR %}
@@ -69,6 +69,8 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+		
+		<script src="{{ SITEURL }}/theme/js/jquery-3.3.1.min.js"></script>
     {% endblock head %}
 
 	{% block opengraph %}
@@ -117,36 +119,30 @@
 						            <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
 						        {% endfor %}
 							{% endif %}
+							<!--<li>-->
+								<!--<div class="clearfix search-nav-clearfix"></div>-->
+								<!--<form action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">-->
+								  <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
+								<!--</form>	-->
+							<!--</li>-->
 						</ul>
 					</nav>
 				</div>
 			</div>
+			
 			<!-- Container / End -->
 		</header>
 		<!-- Header / End -->
 
 		<!-- Breadcrumbs Container-->
 		<div id="content-wrapper">
-			<section id="titlebar">
-				<!-- Container -->
-				<!--<div class="container">-->
-				<!--{% if LOGO %}-->
-					<!--<div class="five columns">-->
-							<!--<h3>{{ SITENAME }}</h3>-->
-					<!--</div>-->
-				<!--{% endif %}-->
-				<!--&lt;!&ndash;<div class="thirteen columns">&ndash;&gt;-->
-					<!--&lt;!&ndash;<nav id="breadcrumbs">&ndash;&gt;-->
-						<!--&lt;!&ndash;<ul>&ndash;&gt;-->
-							<!--&lt;!&ndash;<li>You are here:</li>&ndash;&gt;-->
-							<!--&lt;!&ndash;<li><a href="{{ SITEURL }}/">Home</a></li>&ndash;&gt;-->
-							<!--&lt;!&ndash;{% block page_breadcrumbs %}{% endblock page_breadcrumbs %}&ndash;&gt;-->
-						<!--&lt;!&ndash;</ul>&ndash;&gt;-->
-					<!--&lt;!&ndash;</nav>&ndash;&gt;-->
-				<!--&lt;!&ndash;</div>&ndash;&gt;-->
-				<!--</div>-->
-				<!-- Container / End -->
-			</section>
+			<!--<section id="titlebar">-->
+			<!---->
+			<!--</section>-->
+
+			<div class="container page-header-image">
+				{% block image_header %}{% endblock image_header %}
+			</div>
 
 			<div class="container">
 				{% block content_placeholder %}{% endblock content_placeholder %}
@@ -158,10 +154,23 @@
 		<div id="footer-bottom">
 			<!-- Container -->
 			<div class="container">
-				<div class="eight columns">&copy; {{ COPYRIGHT }} || Blog powered by <a href="http://getpelican.com">Pelican</a></div>
+				<div class="six columns">&copy; 
+					{{ COPYRIGHT }}
+				</div>
+				<div class="four columns">
+					{% block pv %}
+					{% endblock pv %}
+				</div>
 				{% if SOCIAL %}
-					<div class="eight columns">
+					<div class="six columns">
 						<ul class="social-icons-footer">
+							{% for name,link in FA_SOCIAL %}
+								<li class="social-icons-footer-fa-override">
+									<a href="{{ link }}" class="tooltip top social-icons-footer-fa-override" title="{{ name }}">
+										<i class="icon-{{ name|lower }}"></i>
+									</a>
+								</li>
+						    {% endfor %}
 						    {% for name,link in SOCIAL %}
 								<li>
 									<a href="{{ link }}" class="tooltip top" title="{{ name }}">
@@ -179,7 +188,7 @@
 		<!-- Footer Bottom / End -->
 
 	<!-- Javascripts -->
-	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery-3.3.1.min.js"></script>
 	{% include 'disqus_script.html' %}
 	</body>
 </html>

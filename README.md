@@ -1,12 +1,10 @@
 # JWK-Theme theme
-This is the theme use in my personal website
+This is the theme use in my personal website, forked and modified from [nice-blog](https://github.com/guilherme-toti/nice-blog).
 
 
-# Blogs Using Nice-Blog
+# Sites Using JWK-Theme
 
-https://blog.colacoweb.net
-
-http://pietromarchesi.net
+https://jwkennington.com
 
 # Extras
 

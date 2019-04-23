@@ -21,9 +21,24 @@
 		<div class="clearfix"></div>
 	{% endif %}
 	{{ page.content }}
+
+
+{% if GITHUB_ACTIVITY_FEED %}
+	<h3 class="headline">Github Activity</h3>
+	<span class="line" style="margin-bottom: 35px;"></span>
+	<div class="clearfix"></div>
+	<div class="social social-github">
+		<ul>
+		{% for entry in github_activity %}
+			<li><b>{{ entry[0] }}</b><br /> {{ entry[1] }}</li>
+		{% endfor %}
+		</ul>
+	</div><!-- /.github_activity -->
+	<br>
+{% endif %}
 {% endblock content %}
 
+
 {% block pv %}
-	{{ super() }}
-	{{ page.pageview }}
+	{{ super() }} {{ page.pageview }}
 {% endblock pv %}
