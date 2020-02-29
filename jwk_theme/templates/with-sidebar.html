@@ -1,12 +1,26 @@
 {% extends "base.html" %}
 
 {% block image_header %}
-{% if BLOG_PAGE_IMAGE_HEADER %}
-<img src="{{ BLOG_PAGE_IMAGE_HEADER }}">
-{% endif %}
+	{% if BLOG_PAGE_IMAGE_HEADER %}
+		<img src="{{ BLOG_PAGE_IMAGE_HEADER }}">
+	{% endif %}
 {% endblock image_header %}
 
 {% block content_placeholder %}
+	<div class="twelve alt columns">
+		{% block content %}{% endblock content %}
+	</div>
+
+	<!-- Sidebar -->
+	<div class="four columns">
+		{% if 'about' in SIDEBAR_DISPLAY and SIDEBAR_ABOUT %}
+		<!-- About  -->
+		<div class="widget no-mg-top">
+			<h3 class="headline">About</h3><span class="line"></span><div class="clearfix"></div>
+			<p>{{ SIDEBAR_ABOUT }}</p>
+		</div>
+		{% endif %}
+
 <div class="twelve alt columns">
     {% block content %}{% endblock content %}
 </div>
@@ -65,7 +79,7 @@
         <div class="clearfix"></div>
         <!-- Trigger/Open The Modal -->
         <div class="btn-container">
-            <a title="Subscribe via Email" class="kofi-button" style="background-color:#46b798;" href="http://localhost:8000/pages/subscribe">
+            <a title="Subscribe via Email" class="kofi-button" style="background-color:#46b798;" href="http://jwkennington.com/pages/subscribe">
                 <span class="kofitext">Subscribe via Email</span>
             </a>
         </div>
