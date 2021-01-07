@@ -42,7 +42,7 @@
         {% endif %}
 
         <!-- CSS -->
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css?v=1.0.1">
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css?v=1.0.2">
 
         <!-- Custom CSS -->
         {% if THEME_COLOR %}
@@ -82,7 +82,7 @@
 	{% endblock opengraph %}
 	{% include 'analytics.html' %}
 	</head>
-	<body>
+	<body {% block body_style %}{% endblock %}>
 		<header id="header">
 			<!-- Container -->
 			<div class="container">
