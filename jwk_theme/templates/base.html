@@ -87,48 +87,48 @@
 			<!-- Container -->
 			<div class="container">
 				<!-- Logo / Mobile Menu -->
-				<div class="five columns">
+				<div class="sixteen columns">
 				{% if LOGO %}
 					<div id="logo">
 						<a href="{{ SITEURL }}/"><img src="{{ SITEURL }}/images/{{ LOGO }}"></a>
 					</div>
 				{% else %}
 					<div id="textlogo">
-						<h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+						<h1><a class="logo-text" href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
 					</div>
 				{% endif %}
 				</div>
 						<!-- Navigation
 				================================================== -->
-				<div class="eleven columns">
+<!--				<div class="eleven columns">-->
 
-					<nav id="navigation" class="menu">
-						<ul id="responsive">
+<!--					<nav id="navigation" class="menu">-->
+<!--						<ul id="responsive">-->
 
-							<!--<li><a href="{{ SITEURL }}/">Home</a></li>-->
+<!--							&lt;!&ndash;<li><a href="{{ SITEURL }}/">Home</a></li>&ndash;&gt;-->
 
-							{% for title, link in MENUITEMS %}
-							    <li><a href="{{ link }}">{{ title }}</a></li>
-							{% endfor %}
+<!--							{% for title, link in MENUITEMS %}-->
+<!--							    <li><a href="{{ link }}">{{ title }}</a></li>-->
+<!--							{% endfor %}-->
 
-							{% if DISPLAY_PAGES_ON_MENU %}
-							    {% for p in pages %}
-							        <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-							    {% endfor %}
-							{% elif DISPLAY_CATEGORIES_ON_MENU %}
-						        {% for cat, null in categories %}
-						            <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-						        {% endfor %}
-							{% endif %}
-							<!--<li>-->
-								<!--<div class="clearfix search-nav-clearfix"></div>-->
-								<!--<form action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">-->
-								  <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
-								<!--</form>	-->
-							<!--</li>-->
-						</ul>
-					</nav>
-				</div>
+<!--							{% if DISPLAY_PAGES_ON_MENU %}-->
+<!--							    {% for p in pages %}-->
+<!--							        <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>-->
+<!--							    {% endfor %}-->
+<!--							{% elif DISPLAY_CATEGORIES_ON_MENU %}-->
+<!--						        {% for cat, null in categories %}-->
+<!--						            <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>-->
+<!--						        {% endfor %}-->
+<!--							{% endif %}-->
+<!--							&lt;!&ndash;<li>&ndash;&gt;-->
+<!--								&lt;!&ndash;<div class="clearfix search-nav-clearfix"></div>&ndash;&gt;-->
+<!--								&lt;!&ndash;<form action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">&ndash;&gt;-->
+<!--								  &lt;!&ndash;<input id="tipue_search_input" type="text" name="q" placeholder="Search">&ndash;&gt;-->
+<!--								&lt;!&ndash;</form>	&ndash;&gt;-->
+<!--							&lt;!&ndash;</li>&ndash;&gt;-->
+<!--						</ul>-->
+<!--					</nav>-->
+<!--				</div>-->
 			</div>
 			
 			<!-- Container / End -->
@@ -155,34 +155,30 @@
 		<div id="footer-bottom">
 			<!-- Container -->
 			<div class="container">
-				<div class="six columns">&copy; 
-					{{ COPYRIGHT }}
-				</div>
-				<div class="four columns">
+				<div class="sixteen columns">&copy;
+					{{ COPYRIGHT }}&nbsp &middot &nbsp
 					{% block pv %}
-					{% endblock pv %}
-				</div>
-				{% if FA_SOCIAL %}
-					<div class="six columns">
-						<ul class="social-icons-footer">
+					{% endblock pv %}&nbsp &middot &nbsp
+					{% if FA_SOCIAL %}
+<!--						<ul class="social-icons-footer">-->
 							{% for name,link in FA_SOCIAL %}
-								<li >
+<!--								<li >-->
 									<a href="{{ link }}" class="tooltip top social-icons-footer-fa-override" title="{{ name }}">
 										<i class="fab fa-{{ name|lower }}"></i>
 									</a>
-								</li>
-						    {% endfor %}
-						    {% for name,link in SOCIAL %}
-								<li>
-									<a href="{{ link }}" class="tooltip top" title="{{ name }}">
-										<i class="icon-{{ name|lower }}"></i>
-									</a>
-								</li>
-						    {% endfor %}
-							<li><a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" class="tooltip top" title="RSS"><i class="icon-rss"></i></a></li>
-						</ul>
-					</div>
-				{% endif %}
+<!--								</li>-->
+							{% endfor %}
+<!--							{% for name,link in SOCIAL %}-->
+<!--								<li>-->
+<!--									<a href="{{ link }}" class="tooltip top" title="{{ name }}">-->
+<!--										<i class="icon-{{ name|lower }}"></i>-->
+<!--									</a>-->
+<!--								</li>-->
+<!--							{% endfor %}-->
+<!--							<li><a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" class="tooltip top" title="RSS"><i class="icon-rss"></i></a></li>-->
+<!--						</ul>-->
+					{% endif %}
+				</div>
 			</div>
 			<!-- Container / End -->
 		</div>
