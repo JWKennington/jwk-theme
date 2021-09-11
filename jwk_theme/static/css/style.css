@@ -4102,8 +4102,12 @@ input.search {
 }
 
 .home-content {
-	padding: 2.5em;
+	padding: 3em;
 	text-align: center;
+}
+
+.home-content p {
+	margin: 0;
 }
 
 .home-image-credit {
