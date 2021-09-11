@@ -22,6 +22,8 @@
     </div>
     {% endif %}
 
+    {% block sidebar_lead %}{% endblock sidebar_lead %}
+
     {% if 'categories' in SIDEBAR_DISPLAY %}
     <!-- Categories -->
     <div class="widget{% if 'about' not in SIDEBAR_DISPLAY %} no-mg-top{% endif %}">
@@ -41,6 +43,32 @@
     </div>
     {% endif %}
 
+    <div class="widget">
+        <br>
+        <h3 class="headline">Support Me</h3>
+        <hr>
+        <div class="clearfix"></div>
+        <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
+        <script type='text/javascript'>kofiwidget2.init('Buy me a soda', '#42acdf', 'Z8Z4RGIA');
+        kofiwidget2.draw();</script>
+    </div>
+    <div class="widget">
+        <br>
+        <h3 class="headline">Subscribe</h3>
+        <hr>
+        <div class="clearfix"></div>
+        <!-- Trigger/Open The Modal -->
+        <div class="btn-container">
+            <a title="Subscribe via Email" class="kofi-button" style="background-color:#42acdf;"
+               href="http://jwkennington.com/pages/subscribe">
+                <span class="kofitext">Subscribe via Email</span>
+            </a>
+        </div>
+    </div>
+    <br>
+
+    {% block sidebar_extra %}{% endblock sidebar_extra %}
+
     {% if 'tags' in SIDEBAR_DISPLAY %}
     <!-- Tags -->
     <div class="widget{% if 'about' not in SIDEBAR_DISPLAY and 'categories' not in SIDEBAR_DISPLAY %} no-mg-top{% endif %}">
@@ -54,37 +82,6 @@
         </nav>
     </div>
     {% endif %}
-    <div class="widget">
-        <br>
-        <h3 class="headline">Support Me</h3>
-        <hr>
-        <div class="clearfix"></div>
-        <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
-        <script type='text/javascript'>kofiwidget2.init('Buy me a soda', '#46b798', 'Z8Z4RGIA');
-        kofiwidget2.draw();</script>
-    </div>
-    <div class="widget">
-        <br>
-        <h3 class="headline">Subscribe</h3>
-        <hr>
-        <div class="clearfix"></div>
-        <!-- Trigger/Open The Modal -->
-        <div class="btn-container">
-            <a title="Subscribe via Email" class="kofi-button" style="background-color:#46b798;"
-               href="http://jwkennington.com/pages/subscribe">
-                <span class="kofitext">Subscribe via Email</span>
-            </a>
-        </div>
-    </div>
-    <div class="widget">
-        <br>
-        <span class="line"></span>
-        <div class="clearfix"></div>
-        {% block pv %}
-        <b>Page views: </b>
-        {% endblock pv %}
-    </div>
-    <br>
 
 </div>
 {% endblock content_placeholder %}

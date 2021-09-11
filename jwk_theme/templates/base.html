@@ -87,7 +87,7 @@
 			<!-- Container -->
 			<div class="container">
 				<!-- Logo / Mobile Menu -->
-				<div class="sixteen columns">
+				<div class="eight columns">
 				{% if LOGO %}
 					<div id="logo">
 						<a href="{{ SITEURL }}/"><img src="{{ SITEURL }}/images/{{ LOGO }}"></a>
@@ -100,35 +100,43 @@
 				</div>
 						<!-- Navigation
 				================================================== -->
-<!--				<div class="eleven columns">-->
+				<div class="eight columns">
 
-<!--					<nav id="navigation" class="menu">-->
-<!--						<ul id="responsive">-->
+					<div class="vertical-line-container">
+						<div class="vertical-line">
+							<!--						<span>&#124;</span>-->
+						</div>
+					</div>
 
-<!--							&lt;!&ndash;<li><a href="{{ SITEURL }}/">Home</a></li>&ndash;&gt;-->
 
-<!--							{% for title, link in MENUITEMS %}-->
-<!--							    <li><a href="{{ link }}">{{ title }}</a></li>-->
-<!--							{% endfor %}-->
 
-<!--							{% if DISPLAY_PAGES_ON_MENU %}-->
-<!--							    {% for p in pages %}-->
-<!--							        <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>-->
-<!--							    {% endfor %}-->
-<!--							{% elif DISPLAY_CATEGORIES_ON_MENU %}-->
-<!--						        {% for cat, null in categories %}-->
-<!--						            <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>-->
-<!--						        {% endfor %}-->
-<!--							{% endif %}-->
-<!--							&lt;!&ndash;<li>&ndash;&gt;-->
-<!--								&lt;!&ndash;<div class="clearfix search-nav-clearfix"></div>&ndash;&gt;-->
-<!--								&lt;!&ndash;<form action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">&ndash;&gt;-->
-<!--								  &lt;!&ndash;<input id="tipue_search_input" type="text" name="q" placeholder="Search">&ndash;&gt;-->
-<!--								&lt;!&ndash;</form>	&ndash;&gt;-->
-<!--							&lt;!&ndash;</li>&ndash;&gt;-->
-<!--						</ul>-->
-<!--					</nav>-->
-<!--				</div>-->
+					<nav id="navigation" class="menu">
+						<ul id="responsive">
+
+							<!--<li><a href="{{ SITEURL }}/">Home</a></li>-->
+
+							{% for title, link in MENUITEMS %}
+							    <li><a href="{{ link }}">{{ title }}</a></li>
+							{% endfor %}
+
+							{% if DISPLAY_PAGES_ON_MENU %}
+							    {% for p in pages %}
+							        <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+							    {% endfor %}
+							{% elif DISPLAY_CATEGORIES_ON_MENU %}
+						        {% for cat, null in categories %}
+						            <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+						        {% endfor %}
+							{% endif %}
+							<!--<li>-->
+								<!--<div class="clearfix search-nav-clearfix"></div>-->
+								<!--<form action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">-->
+								  <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
+								<!--</form>	-->
+							<!--</li>-->
+						</ul>
+					</nav>
+				</div>
 			</div>
 			
 			<!-- Container / End -->
