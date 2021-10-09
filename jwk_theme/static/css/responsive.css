@@ -195,6 +195,22 @@
         
         body.boxed,
         body.boxed #header                          { width: 100% }
+
+        .menu {
+            display: none;
+        }
+
+        #textlogo {
+            text-align: center !important;
+        }
+
+        .vertical-line-container {
+            display: none;
+        }
+
+        .home-section {
+            padding-top: 20px !important;
+        }
     }
 
 
@@ -238,6 +254,22 @@
         
         body.boxed,
         body.boxed #header                          { width: 100% }
+
+        .menu {
+            display: none;
+        }
+
+        #textlogo {
+            text-align: center !important;
+        }
+
+        .vertical-line-container {
+            display: none;
+        }
+
+        .home-section {
+            padding-top: 20px !important;
+        }
     }
 
 
